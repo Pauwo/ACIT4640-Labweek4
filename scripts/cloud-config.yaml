@@ -1,0 +1,13 @@
+#cloud-config
+users:
+  - name: web
+    primary_group: web
+    groups: wheel
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCYE3OHnWr9bMK7sUrvL99+O8xeYnIJGpfW+EcpEcPT6jld2NglrkiyCrYXf7zIXUN7KGfQwLTo+LNNeY60wFK+Qvk23MhqDFRsAUebaMn5vPX8w9fA03XDMB4By8LFKZ6vOzq/dtf2QhlmMj9Q38CjqO2LFBEFbEw+ZKbx6uxLyS4qbA3poIFSGIUL6D28AqCpB9Ddl4Pc4QdBE9DJX1Xm+qusJp/c1OJpo6uK9/eWUgsaRSkPbnpnaKpY0KANgOWM92kCJZ+IaItXVPlsxqtRhqBEWYyN0Jyvy6B9wevg8c9QWAYm5eLD5OO7+HBzgcQftDTRXhkkZ3MUWAkrWbxNLMuqLJbygm4p+oPbVebtzxPLrCue61pRTfjxGAe4gTh6gNhY10I8BQlQZY+5IJSdWciBy8gwevrVBnvQOAFYLni/knOLq7snDOuoPDYn6hmMBdH/R4UK66PjvXWsxXn4bwR5EyJFjOP3jGJjI/krJxLeJI1Q1GOV5Af9mYMc+6sqfk6mAhw2S9ojK+NYvGLQWT52r7O5hizgmNrSVlCBlsIXgeTUBy451e6VWtGuOJs1o/p9HK9VPoibTzEaeB6UpY6A0WyHCaeIpNYQuGnk+QNemoPw9DmZAbYefrIr2BznVj4nJ3FInckzNoKOUrj90cgiL8HtHJJXsSovbKf55Q== rhernandez35@my.bcit.ca
+
+packages:
+  - nginx
+  - nmap
